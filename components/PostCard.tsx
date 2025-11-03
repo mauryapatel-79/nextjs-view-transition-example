@@ -58,14 +58,11 @@ const PostCard: FC<PostCardProps> = ({ post }) => {
                         </div>
                     </ViewTransition>
                     <div className="flex items-center gap-4">
-                        <ViewTransition name={`post-${post.reactions.likes}`}>
+                        <ViewTransition name={`post-reactions-${post.id}`}>
                             <span className="flex items-center gap-1.5">
                                 <ThumbsUp size={14} className="text-teal-500" />
                                 {post.reactions.likes}
                             </span>
-                        </ViewTransition>
-                        <ViewTransition name={`post-${post.reactions.dislikes}`}>
-
                             <span className="flex items-center gap-1.5">
                                 <ThumbsDown size={14} className="text-rose-500" />
                                 {post.reactions.dislikes}

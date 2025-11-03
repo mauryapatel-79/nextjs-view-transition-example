@@ -20,9 +20,7 @@ export default async function Page({ params }: PageProps) {
 
     return (
         <div className="p-4">
-            <ViewTransition name={`post-${data.id}`}>
                 <Post post={data} />
-            </ViewTransition>
         </div>
     )
 }

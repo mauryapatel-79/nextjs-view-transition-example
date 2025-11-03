@@ -24,3 +24,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+::view-transition-old(.slide-out) {
+  animation: slide-out-left 300ms ease-in;
+}
+
+::view-transition-new(.slide-in) {
+  animation: slide-in-right 300ms ease-out;
+}
+
+::view-transition-group(.fade-slow) {
+  animation-duration: 800ms;
+}
+
+@keyframes slide-out-left {
+  to { transform: translateX(-100%); }
+}
+
+@keyframes slide-in-right {
+  from { transform: translateX(100%); }
+}
